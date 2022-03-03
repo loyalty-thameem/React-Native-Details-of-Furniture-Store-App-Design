@@ -28,10 +28,13 @@ const ScrollableTab = ({ tabList1, selectedTab1, onPress }) => {
   }
   // item value vanthu params ah HOME componentla irunthu data-ve receive aaguthu
   const renderItem = ({ item }) => (
+  
+    /*DATA vanthu data irukku athaala athula irukkura value yellaam setSelectedTab value pass aagum...*/
+  
     <TouchableOpacity
       style={{ marginHorizontal: SIZES.padding }}
       onPress={() => onPress(item)}>
-      <Text>{item.name}</Text>
+      <Text style={{backgroundColor:'green'}}>{item.name}</Text>
     </TouchableOpacity>
   );
   return (
@@ -249,6 +252,7 @@ const Home = () => {
         tabList1={tabList}
         selectedTab1={selectedTab}
         onPress={(item) => setSelectedTab(item)}
+      /*onPress item ah data-ve prams pass aagi SCROLLABLETAB componenntkku pass aaguthu. athai onPress ah antha componentla irunthu item inge Pass aagi setSelectedTab muliyama ah data change aagum........*/
       />
     </SafeAreaView>
   );
